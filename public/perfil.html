@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>PMCore | Perfil</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">PMCore</a>
+
+      <ul class="nav-links">
+        <li><a href="index.html#recursos">Recursos</a></li>
+        <li><a href="planos.html">Planos</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+
+      <a href="login.html" class="btn btn-primary" data-auth-link>Entrar</a>
+    </nav>
+  </header>
+
+  <main class="profile-page">
+
+    <section class="profile-personal-section">
+      <div class="profile-content">
+        <h1>Dados Pessoais</h1>
+
+        <form id="profileForm" class="profile-form">
+
+          <div class="profile-field">
+            <label for="profileName">Nome</label>
+
+            <div class="profile-input-row">
+              <input 
+                type="text" 
+                id="profileName" 
+                placeholder="Digite seu nome"
+                disabled 
+              />
+              <button type="button" class="edit-field-button" data-edit="profileName">
+                ✎
+              </button>
+            </div>
+          </div>
+
+          <div class="profile-field">
+            <label for="profileEmail">E-mail</label>
+
+            <div class="profile-input-row">
+              <input 
+                type="email" 
+                id="profileEmail" 
+                placeholder="Digite seu e-mail"
+                disabled 
+              />
+              <button type="button" class="edit-field-button" data-edit="profileEmail">
+                ✎
+              </button>
+            </div>
+          </div>
+
+          <div class="profile-field">
+            <label for="profilePassword">Senha</label>
+
+            <div class="profile-input-row">
+              <input 
+                type="password" 
+                id="profilePassword" 
+                placeholder="Digite sua senha"
+                disabled 
+              />
+              <button type="button" class="edit-field-button" data-edit="profilePassword">
+                ✎
+              </button>
+            </div>
+          </div>
+
+          <button type="submit" class="save-profile-button">
+            💾 Salvar alterações
+          </button>
+
+        </form>
+      </div>
+    </section>
+
+    <section class="profile-plans-section">
+      <div class="profile-content">
+        <h2>Planos</h2>
+
+        <div id="profilePlanArea" class="profile-plan-area">
+          <!-- O plano aparece aqui via JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <section class="profile-danger-section">
+      <div class="profile-content">
+        <button id="deleteAccountButton" class="delete-account-button">
+          🗑 Excluir Conta
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 PMCore — Projeto Acadêmico</p>
+    <a href="index.html">Voltar</a>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/perfil.js"></script>
+</body>
+</html>

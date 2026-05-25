@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>PMCore | Cadastro</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="auth-body">
+
+  <main class="auth-page">
+
+    <section class="auth-card auth-card-register">
+
+      <h1>Cadastro</h1>
+
+      <p>Faça seu cadastro para desfrutar de nossos planos.</p>
+
+      <form id="registerForm" class="auth-form">
+
+        <div class="form-group">
+          <label for="registerName">Digite seu nome:</label>
+          <input type="text" id="registerName" name="nome" required />
+        </div>
+
+        <div class="form-group">
+          <label for="registerEmail">Digite seu e-mail:</label>
+          <input type="email" id="registerEmail" name="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="registerPassword">Digite sua senha:</label>
+          <input type="password" id="registerPassword" name="senha" required />
+        </div>
+
+        <div class="form-group">
+          <label for="confirmPassword">Confirme sua senha:</label>
+          <input type="password" id="confirmPassword" name="confirmarSenha" required />
+        </div>
+
+        <label class="terms-row">
+          <input type="checkbox" id="termsCheckbox" required />
+          <span>Li e concordo com os termos de uso e política de privacidade.</span>
+        </label>
+
+        <button type="submit" class="auth-button">
+          Cadastre-se
+        </button>
+
+      </form>
+
+    </section>
+
+  </main>
+
+  <div id="registerModal" class="register-modal-overlay">
+    <div class="register-modal">
+      <h2>Sua conta foi criada!</h2>
+
+      <h3 id="welcomeUserName">Bem-vindo!</h3>
+
+      <p>Redirecionando à página inicial...</p>
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+console.log("PMCore iniciado, porra...");

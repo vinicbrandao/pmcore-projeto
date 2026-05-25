@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>PMCore | Planos</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">PMCore</a>
+
+      <ul class="nav-links">
+        <li><a href="index.html#recursos">Recursos</a></li>
+        <li><a href="planos.html">Planos</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+
+      <a href="login.html" class="btn btn-primary" data-auth-link>Entrar</a>
+    </nav>
+  </header>
+
+  <main class="plans-page">
+    <section class="plans-intro">
+      <h1>Planos Disponíveis</h1>
+      <p>
+        Selecione o plano que mais se encaixa com sua equipe e suas necessidades.
+      </p>
+    </section>
+
+    <section class="plans-list">
+
+      <article class="plan-preview-card">
+        <img 
+          src="assets/images/plano-basico.jpg" 
+          alt="Equipe pequena analisando dados do projeto"
+          class="plan-preview-image"
+        />
+
+        <div class="plan-preview-content">
+          <h2>Básico</h2>
+
+          <p>Para equipes pequenas e poucos projetos.</p>
+
+          <ul>
+            <li>Até 3 projetos</li>
+            <li>Relatório simples</li>
+            <li>Suporte por e-mail</li>
+          </ul>
+
+          <div class="plan-card-actions">
+            <a href="detalhes-plano.html?plano=basico" class="btn-details">
+              Ver detalhes
+            </a>
+
+            <a href="pagamento.html?plano=basico&periodo=mensal" class="btn btn-small">
+              Escolher
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="plan-preview-card">
+        <img 
+          src="assets/images/plano-pro.jpg" 
+          alt="Equipe acompanhando planejamento de projeto"
+          class="plan-preview-image"
+        />
+
+        <div class="plan-preview-content">
+          <h2>Pro</h2>
+
+          <p>Para equipes com múltiplos projetos.</p>
+
+          <ul>
+            <li>Projetos ilimitados</li>
+            <li>Indicadores avançados</li>
+            <li>Suporte prioritário</li>
+          </ul>
+
+          <div class="plan-card-actions">
+            <a href="detalhes-plano.html?plano=pro" class="btn-details">
+              Ver detalhes
+            </a>
+
+            <a href="pagamento.html?plano=pro&periodo=mensal" class="btn btn-small">
+              Escolher
+            </a>
+          </div>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 PMCore — Projeto Acadêmico</p>
+    <a href="index.html">Voltar</a>
+  </footer>
+
+</body>
+</html>

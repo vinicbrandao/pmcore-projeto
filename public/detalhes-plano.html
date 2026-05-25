@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>PMCore | Detalhes do Plano</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">PMCore</a>
+
+      <ul class="nav-links">
+        <li><a href="index.html#recursos">Recursos</a></li>
+        <li><a href="planos.html">Planos</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+
+      <a href="login.html" class="btn btn-primary" data-auth-link>Entrar</a>
+    </nav>
+  </header>
+
+  <main class="plan-details-page">
+
+    <section class="plan-details-header">
+      <a href="planos.html" class="back-link">← Voltar para planos</a>
+
+      <span id="planTag" class="plan-tag"></span>
+
+      <h1 id="planTitle"></h1>
+
+      <p id="planSubtitle"></p>
+    </section>
+
+    <section class="plan-details-layout">
+
+      <div class="plan-details-image-card">
+        <img id="planImage" src="" alt="" />
+      </div>
+
+      <aside class="plan-summary-card">
+        <p class="summary-label">Plano selecionado</p>
+
+        <h2 id="planName"></h2>
+
+        <p id="planPrice" class="plan-price"></p>
+
+        <p id="planBilling" class="plan-billing"></p>
+
+        <a id="choosePlanButton" href="#" class="btn btn-primary plan-main-button">
+          Escolher este plano
+        </a>
+      </aside>
+
+    </section>
+
+    <section class="plan-details-grid">
+
+      <article class="details-info-card">
+        <h2>Sobre o plano</h2>
+        <p id="planDescription"></p>
+      </article>
+
+      <article class="details-info-card">
+        <h2>Indicado para</h2>
+        <p id="planAudience"></p>
+      </article>
+
+      <article class="details-info-card details-info-card-full">
+        <h2>Recursos incluídos</h2>
+        <ul id="planFeatures" class="features-list"></ul>
+      </article>
+
+    </section>
+
+    <section class="comparison-section">
+      <h2>Comparativo rápido</h2>
+
+      <div class="comparison-table-wrapper">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Recurso</th>
+              <th>Básico</th>
+              <th>Pro</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Projetos</td>
+              <td>Até 3 projetos</td>
+              <td>Ilimitados</td>
+            </tr>
+
+            <tr>
+              <td>Relatórios</td>
+              <td>Simples</td>
+              <td>Avançados</td>
+            </tr>
+
+            <tr>
+              <td>Indicadores financeiros</td>
+              <td>Essenciais</td>
+              <td>Completos</td>
+            </tr>
+
+            <tr>
+              <td>Suporte</td>
+              <td>Por e-mail</td>
+              <td>Prioritário</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 PMCore — Projeto Acadêmico</p>
+    <a href="planos.html">Voltar</a>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/detalhesPlano.js"></script>
+</body>
+</html>

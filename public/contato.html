@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>PMCore | Contato</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">PMCore</a>
+
+      <ul class="nav-links">
+        <li><a href="index.html#recursos">Recursos</a></li>
+        <li><a href="planos.html">Planos</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+
+      <a href="login.html" class="btn btn-primary" data-auth-link>Entrar</a>
+    </nav>
+  </header>
+
+  <main class="contact-page">
+
+    <section class="contact-content">
+
+      <h1>Fale com a PMCore</h1>
+
+      <p>Envie sua dúvida e retornaremos o quanto antes.</p>
+
+      <form id="contactForm" class="contact-form">
+
+        <div class="contact-form-group">
+          <label for="contactName">Nome</label>
+          <input type="text" id="contactName" name="nome" required />
+        </div>
+
+        <div class="contact-form-group">
+          <label for="contactEmail">E-mail</label>
+          <input type="email" id="contactEmail" name="email" required />
+        </div>
+
+        <div class="contact-form-group">
+          <label for="contactSubject">Assunto</label>
+          <input type="text" id="contactSubject" name="assunto" required />
+        </div>
+
+        <div class="contact-form-group">
+          <label for="contactMessage">Mensagem</label>
+          <textarea id="contactMessage" name="mensagem" required></textarea>
+        </div>
+
+        <div class="file-area">
+          <input type="file" id="contactFile" name="arquivo" hidden />
+
+          <label for="contactFile" class="file-label">
+            <span class="file-icon">📎</span>
+            Anexar arquivos
+          </label>
+
+          <span id="fileName" class="file-name"></span>
+        </div>
+
+        <label class="contact-terms-row">
+          <input type="checkbox" id="contactConsent" required />
+          <span>Concordo com o uso dos dados apenas para retorno deste contato.</span>
+        </label>
+
+        <button type="submit" class="contact-submit-button">
+          Enviar
+        </button>
+
+      </form>
+
+    </section>
+
+  </main>
+
+  <div id="contactModal" class="contact-modal-overlay">
+    <div class="contact-modal">
+      <h2>Mensagem enviada!</h2>
+
+      <h3>Obrigado pelo contato.</h3>
+
+      <p>Redirecionando à página inicial...</p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>© 2026 PMCore — Projeto Acadêmico</p>
+    <a href="index.html">Voltar</a>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/contato.js"></script>
+</body>
+</html>

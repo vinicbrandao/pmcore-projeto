@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>PMCore | Dashboard</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">PMCore</a>
+
+      <ul class="nav-links">
+        <li><a href="index.html#recursos">Recursos</a></li>
+        <li><a href="planos.html">Planos</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+
+      <a href="login.html" class="btn btn-primary" data-auth-link>Entrar</a>
+    </nav>
+  </header>
+
+  <main class="dashboard-page">
+
+    <section class="dashboard-hero">
+      <div>
+        <span id="dashboardPlanTag" class="dashboard-plan-tag">Plano</span>
+
+        <h1>Dashboard Financeiro</h1>
+
+        <p id="dashboardWelcome">
+          Acompanhe os principais dados financeiros dos seus projetos.
+        </p>
+      </div>
+
+      <div class="dashboard-actions">
+        <a href="perfil.html" class="dashboard-secondary-button">
+          Voltar ao Perfil
+        </a>
+
+        <button id="logoutButton" class="dashboard-danger-button">
+          Sair
+        </button>
+      </div>
+    </section>
+
+    <section class="dashboard-summary-grid">
+
+      <article class="dashboard-summary-card">
+        <p>Receitas</p>
+        <h2 id="totalReceitas">R$ 0,00</h2>
+        <span>Entradas registradas</span>
+      </article>
+
+      <article class="dashboard-summary-card">
+        <p>Despesas</p>
+        <h2 id="totalDespesas">R$ 0,00</h2>
+        <span>Saídas registradas</span>
+      </article>
+
+      <article class="dashboard-summary-card">
+        <p>Saldo</p>
+        <h2 id="saldoFinal">R$ 0,00</h2>
+        <span>Receitas menos despesas</span>
+      </article>
+
+      <article class="dashboard-summary-card">
+        <p>Projetos</p>
+        <h2 id="totalProjetos">0</h2>
+        <span>Projetos ativos</span>
+      </article>
+
+    </section>
+
+    <section class="dashboard-content-grid">
+
+      <article class="dashboard-panel">
+        <div class="dashboard-panel-header">
+          <h2>Projetos em andamento</h2>
+          <button class="dashboard-small-button">Novo Projeto</button>
+        </div>
+
+        <div id="projectsList" class="projects-list">
+          <!-- Projetos via JavaScript -->
+        </div>
+      </article>
+
+      <article class="dashboard-panel">
+        <div class="dashboard-panel-header">
+          <h2>Resumo por categoria</h2>
+        </div>
+
+        <div id="categoryBars" class="category-bars">
+          <!-- Barras via JavaScript -->
+        </div>
+      </article>
+
+    </section>
+
+    <section class="dashboard-bottom-grid">
+
+      <article class="dashboard-panel">
+        <div class="dashboard-panel-header">
+          <h2>Últimas movimentações</h2>
+        </div>
+
+        <div class="dashboard-table-wrapper">
+          <table class="dashboard-table">
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>Descrição</th>
+                <th>Tipo</th>
+                <th>Valor</th>
+              </tr>
+            </thead>
+
+            <tbody id="transactionsTable">
+              <!-- Movimentações via JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </article>
+
+      <article class="dashboard-panel dashboard-ai-panel">
+        <h2>Agente de IA</h2>
+
+        <p>
+          Futuramente, esta área poderá ajudar a interpretar os dados financeiros,
+          apontar riscos e sugerir ações para os projetos.
+        </p>
+
+        <div class="ai-placeholder-box">
+          <strong>Exemplo de pergunta:</strong>
+          <span>“Quais projetos precisam de mais atenção este mês?”</span>
+        </div>
+
+        <button class="dashboard-small-button" disabled>
+          Em breve
+        </button>
+      </article>
+
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 PMCore — Projeto Acadêmico</p>
+    <a href="perfil.html">Perfil</a>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

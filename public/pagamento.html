@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>PMCore | Pagamento</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">PMCore</a>
+
+      <ul class="nav-links">
+        <li><a href="index.html#recursos">Recursos</a></li>
+        <li><a href="planos.html">Planos</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+
+      <a href="login.html" class="btn btn-primary" data-auth-link>Entrar</a>
+    </nav>
+  </header>
+
+  <main class="payment-page">
+
+    <section class="payment-container">
+
+      <div class="payment-form-area">
+
+        <div class="selected-plan-box">
+          <div>
+            <h1 id="paymentPlanTitle">Plano Básico</h1>
+            <p id="paymentPlanDescription">
+              Ideal para profissionais autônomos e pequenas equipes.
+            </p>
+          </div>
+
+          <strong id="paymentPlanPrice">R$ 49,90</strong>
+        </div>
+
+        <form id="paymentForm" class="payment-form">
+
+          <label for="billingPeriod">Selecione o período do plano</label>
+          <select id="billingPeriod" name="billingPeriod">
+            <option value="mensal">Mensal</option>
+            <option value="anual">Anual com 15% de desconto</option>
+          </select>
+
+          <label for="paymentMethod">Selecione a forma de pagamento</label>
+          <select id="paymentMethod" name="paymentMethod">
+            <option value="pix">Pix</option>
+            <option value="credito">Cartão de Crédito</option>
+          </select>
+
+          <label for="cardName">Nome do Cartão</label>
+          <input type="text" id="cardName" name="cardName" />
+
+          <label for="cpf">CPF</label>
+          <input type="text" id="cpf" name="cpf" />
+
+          <label for="cardNumber">Número do Cartão</label>
+          <input type="text" id="cardNumber" name="cardNumber" />
+
+          <div class="payment-row">
+            <div>
+              <label for="cvv">Código CVV</label>
+              <input type="text" id="cvv" name="cvv" />
+            </div>
+
+            <div>
+              <label for="expirationDate">Data de Vencimento</label>
+              <input type="text" id="expirationDate" name="expirationDate" placeholder="MM/AA" />
+            </div>
+          </div>
+
+        </form>
+
+      </div>
+
+      <div class="payment-divider"></div>
+
+      <div class="payment-image-area">
+        <img 
+          src="assets/images/pagamento.jpg" 
+          alt="Pessoa realizando pagamento pelo computador"
+        />
+
+        <button id="confirmPaymentButton" class="confirm-payment-button">
+          Confirmar Pagamento
+        </button>
+      </div>
+
+    </section>
+
+  </main>
+
+  <div id="paymentModal" class="modal-overlay">
+    <div class="payment-modal">
+      <h2>Compra Finalizada!</h2>
+
+      <p>Ficamos felizes em ter você conosco.</p>
+
+      <a href="perfil.html" class="modal-profile-button">
+        Ir até o Perfil
+      </a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>© 2026 PMCore — Projeto Acadêmico</p>
+    <a href="planos.html">Voltar</a>
+  </footer>
+  
+  <script src="js/nav.js"></script>
+  <script src="js/pagamento.js"></script>
+</body>
+</html>
