@@ -1,28 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<%- include("../partials/head", { title }) %>
 
-  <title>PMCore | Controle Financeiro de Projetos</title>
-
-  <link rel="stylesheet" href="css/style.css" />
-</head>
 <body>
-
-  <header class="header">
-    <nav class="navbar">
-      <a href="index.html" class="logo">PMCore</a>
-
-      <ul class="nav-links">
-        <li><a href="#recursos">Recursos</a></li>
-        <li><a href="planos.html">Planos</a></li>
-        <li><a href="contato.html">Contato</a></li>
-      </ul>
-
-      <a href="login.html" class="btn btn-primary" data-auth-link>Entrar</a>
-    </nav>
-  </header>
+  <%- include("../partials/header") %>
 
   <main>
     <section class="hero">
@@ -35,7 +16,7 @@
         </p>
 
         <div class="hero-buttons">
-          <a href="#planos" class="btn btn-primary">Experimentar</a>
+          <a href="/planos" class="btn btn-primary">Experimentar</a>
           <a href="#recursos" class="btn btn-secondary">Ver recursos</a>
         </div>
       </div>
@@ -77,7 +58,7 @@
             <li>Suporte por e-mail</li>
           </ul>
 
-          <a href="planos.html" class="btn btn-small">Ver mais</a>
+          <a href="/planos" class="btn btn-small">Ver mais</a>
         </article>
 
         <article class="plan-card">
@@ -91,18 +72,15 @@
             <li>Suporte prioritário</li>
           </ul>
 
-          <a href="#" class="btn btn-small">Ver mais</a>
+          <a href="/planos" class="btn btn-small">Ver mais</a>
         </article>
       </div>
     </section>
   </main>
 
-  <footer id="contato" class="footer">
-    <p>© 2026 PMCore — Projeto Acadêmico</p>
-    <a href="contato.html">Contato</a>
-  </footer>
+  <%- include("../partials/footer", { backHref: "/contato", backText: "Contato" }) %>
 
-  <script src="js/nav.js"></script>
-  <script src="js/main.js"></script>
+  <script src="/js/nav.js"></script>
+  <script src="/js/main.js"></script>
 </body>
 </html>

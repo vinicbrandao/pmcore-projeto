@@ -1,33 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<%- include("../partials/head", { title }) %>
 
-  <title>PMCore | Detalhes do Plano</title>
-
-  <link rel="stylesheet" href="css/style.css" />
-</head>
 <body>
-
-  <header class="header">
-    <nav class="navbar">
-      <a href="index.html" class="logo">PMCore</a>
-
-      <ul class="nav-links">
-        <li><a href="index.html#recursos">Recursos</a></li>
-        <li><a href="planos.html">Planos</a></li>
-        <li><a href="contato.html">Contato</a></li>
-      </ul>
-
-      <a href="login.html" class="btn btn-primary" data-auth-link>Entrar</a>
-    </nav>
-  </header>
+  <%- include("../partials/header") %>
 
   <main class="plan-details-page">
-
     <section class="plan-details-header">
-      <a href="planos.html" class="back-link">← Voltar para planos</a>
+      <a href="/planos" class="back-link">← Voltar para planos</a>
 
       <span id="planTag" class="plan-tag"></span>
 
@@ -37,7 +17,6 @@
     </section>
 
     <section class="plan-details-layout">
-
       <div class="plan-details-image-card">
         <img id="planImage" src="" alt="" />
       </div>
@@ -55,11 +34,9 @@
           Escolher este plano
         </a>
       </aside>
-
     </section>
 
     <section class="plan-details-grid">
-
       <article class="details-info-card">
         <h2>Sobre o plano</h2>
         <p id="planDescription"></p>
@@ -74,7 +51,6 @@
         <h2>Recursos incluídos</h2>
         <ul id="planFeatures" class="features-list"></ul>
       </article>
-
     </section>
 
     <section class="comparison-section">
@@ -118,15 +94,11 @@
         </table>
       </div>
     </section>
-
   </main>
 
-  <footer class="footer">
-    <p>© 2026 PMCore — Projeto Acadêmico</p>
-    <a href="planos.html">Voltar</a>
-  </footer>
+  <%- include("../partials/footer", { backHref: "/planos", backText: "Voltar" }) %>
 
-  <script src="js/nav.js"></script>
-  <script src="js/detalhesPlano.js"></script>
+  <script src="/js/nav.js"></script>
+  <script src="/js/detalhesPlano.js"></script>
 </body>
 </html>

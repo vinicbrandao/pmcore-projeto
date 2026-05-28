@@ -1,39 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<%- include("../partials/head", { title }) %>
 
-  <title>PMCore | Contato</title>
-
-  <link rel="stylesheet" href="css/style.css" />
-</head>
 <body>
-
-  <header class="header">
-    <nav class="navbar">
-      <a href="index.html" class="logo">PMCore</a>
-
-      <ul class="nav-links">
-        <li><a href="index.html#recursos">Recursos</a></li>
-        <li><a href="planos.html">Planos</a></li>
-        <li><a href="contato.html">Contato</a></li>
-      </ul>
-
-      <a href="login.html" class="btn btn-primary" data-auth-link>Entrar</a>
-    </nav>
-  </header>
+  <%- include("../partials/header") %>
 
   <main class="contact-page">
-
     <section class="contact-content">
-
       <h1>Fale com a PMCore</h1>
 
       <p>Envie sua dúvida e retornaremos o quanto antes.</p>
 
       <form id="contactForm" class="contact-form">
-
         <div class="contact-form-group">
           <label for="contactName">Nome</label>
           <input type="text" id="contactName" name="nome" required />
@@ -73,11 +51,8 @@
         <button type="submit" class="contact-submit-button">
           Enviar
         </button>
-
       </form>
-
     </section>
-
   </main>
 
   <div id="contactModal" class="contact-modal-overlay">
@@ -90,12 +65,9 @@
     </div>
   </div>
 
-  <footer class="footer">
-    <p>© 2026 PMCore — Projeto Acadêmico</p>
-    <a href="index.html">Voltar</a>
-  </footer>
+  <%- include("../partials/footer", { backHref: "/", backText: "Voltar" }) %>
 
-  <script src="js/nav.js"></script>
-  <script src="js/contato.js"></script>
+  <script src="/js/nav.js"></script>
+  <script src="/js/contato.js"></script>
 </body>
 </html>

@@ -1,31 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<%- include("../partials/head", { title }) %>
 
-  <title>PMCore | Dashboard</title>
-
-  <link rel="stylesheet" href="css/style.css" />
-</head>
 <body>
-
-  <header class="header">
-    <nav class="navbar">
-      <a href="index.html" class="logo">PMCore</a>
-
-      <ul class="nav-links">
-        <li><a href="index.html#recursos">Recursos</a></li>
-        <li><a href="planos.html">Planos</a></li>
-        <li><a href="contato.html">Contato</a></li>
-      </ul>
-
-      <a href="login.html" class="btn btn-primary" data-auth-link>Entrar</a>
-    </nav>
-  </header>
+  <%- include("../partials/header") %>
 
   <main class="dashboard-page">
-
     <section class="dashboard-hero">
       <div>
         <span id="dashboardPlanTag" class="dashboard-plan-tag">Plano</span>
@@ -38,7 +18,7 @@
       </div>
 
       <div class="dashboard-actions">
-        <a href="perfil.html" class="dashboard-secondary-button">
+        <a href="/perfil" class="dashboard-secondary-button">
           Voltar ao Perfil
         </a>
 
@@ -49,7 +29,6 @@
     </section>
 
     <section class="dashboard-summary-grid">
-
       <article class="dashboard-summary-card">
         <p>Receitas</p>
         <h2 id="totalReceitas">R$ 0,00</h2>
@@ -73,11 +52,9 @@
         <h2 id="totalProjetos">0</h2>
         <span>Projetos ativos</span>
       </article>
-
     </section>
 
     <section class="dashboard-content-grid">
-
       <article class="dashboard-panel">
         <div class="dashboard-panel-header">
           <h2>Projetos em andamento</h2>
@@ -98,11 +75,9 @@
           <!-- Barras via JavaScript -->
         </div>
       </article>
-
     </section>
 
     <section class="dashboard-bottom-grid">
-
       <article class="dashboard-panel">
         <div class="dashboard-panel-header">
           <h2>Últimas movimentações</h2>
@@ -143,17 +118,12 @@
           Em breve
         </button>
       </article>
-
     </section>
-
   </main>
 
-  <footer class="footer">
-    <p>© 2026 PMCore — Projeto Acadêmico</p>
-    <a href="perfil.html">Perfil</a>
-  </footer>
+  <%- include("../partials/footer", { backHref: "/perfil", backText: "Perfil" }) %>
 
-  <script src="js/nav.js"></script>
-  <script src="js/dashboard.js"></script>
+  <script src="/js/nav.js"></script>
+  <script src="/js/dashboard.js"></script>
 </body>
 </html>
